@@ -77,6 +77,14 @@ export default function App() {
             Be among the first to join the presale of 1,000,000 tokens. Your chance to support a purpose-driven movement for Israel and crypto transparency.
           </p>
 
+          <a
+            href="https://x.com/SUP4IL"
+            target="_blank"
+            className="inline-block mb-6 px-5 py-2 text-sm text-black bg-blue-400 rounded-md font-medium shadow hover:bg-blue-500 transition"
+          >
+            Follow us on X
+          </a>
+
           {timeLeft ? (
             <div className="grid grid-cols-4 gap-4 justify-center text-center text-2xl sm:text-4xl font-bold tracking-widest mb-10">
               <div>
