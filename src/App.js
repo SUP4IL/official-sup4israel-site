@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [timeLeft, setTimeLeft] = useState({});
@@ -164,6 +165,9 @@ export default function App() {
       <footer className="bg-black text-white py-6 text-center">
         <p className="text-sm">© {new Date().getFullYear()} SUP4Israel — Built on Ethereum, powered by unity.</p>
       </footer>
+
+      {/* Analytics */}
+      <Analytics />
     </main>
   );
 }
