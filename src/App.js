@@ -51,6 +51,7 @@ export default function App() {
             <a href="#about" className="hover:underline">About</a>
             <a href="#contact" className="hover:underline">Contact</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-blue-400">Follow us on X</a>
+            <a href="https://app.uniswap.org/#/swap?outputCurrency=0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d" target="_blank" className="hover:underline font-semibold text-green-400">Trade S4IL</a>
           </div>
         </div>
         {menuOpen && (
@@ -59,6 +60,7 @@ export default function App() {
             <a href="#about" className="hover:underline">About</a>
             <a href="#contact" className="hover:underline">Contact</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-lg text-blue-400 bg-white text-black px-4 py-2 rounded-lg text-center">Follow us on X</a>
+            <a href="https://app.uniswap.org/#/swap?outputCurrency=0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d" target="_blank" className="hover:underline font-semibold text-lg text-green-400 bg-white text-black px-4 py-2 rounded-lg text-center">Trade S4IL</a>
           </div>
         )}
       </nav>
@@ -80,9 +82,17 @@ export default function App() {
           <a
             href="https://x.com/SUP4IL"
             target="_blank"
-            className="inline-block mb-6 px-5 py-2 text-sm text-black bg-blue-400 rounded-md font-medium shadow hover:bg-blue-500 transition"
+            className="inline-block mb-4 px-5 py-2 text-sm text-black bg-blue-400 rounded-md font-medium shadow hover:bg-blue-500 transition"
           >
             Follow us on X
+          </a>
+
+          <a
+            href="https://app.uniswap.org/#/swap?outputCurrency=0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d"
+            target="_blank"
+            className="inline-block mb-6 ml-3 px-5 py-2 text-sm text-black bg-green-400 rounded-md font-medium shadow hover:bg-green-500 transition"
+          >
+            Trade S4IL on Uniswap
           </a>
 
           {timeLeft ? (
@@ -109,7 +119,7 @@ export default function App() {
           )}
 
           <a
-            href="https://app.uniswap.org"
+            href="https://app.uniswap.org/#/swap?outputCurrency=0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 border border-white rounded-lg font-semibold text-white hover:bg-white hover:text-black transition"
