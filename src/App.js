@@ -78,27 +78,22 @@ export default function App() {
           </p>
 
           {timeLeft ? (
-            <div className="text-center text-4xl md:text-5xl font-bold tracking-widest mb-10">
-              <div className="flex flex-wrap justify-center space-x-4 md:space-x-6">
-                <div>
-                  <div>{String(timeLeft.days).padStart(2, '0')}</div>
-                  <div className="text-sm mt-1">Days</div>
-                </div>
-                <div>:</div>
-                <div>
-                  <div>{String(timeLeft.hours).padStart(2, '0')}</div>
-                  <div className="text-sm mt-1">Hours</div>
-                </div>
-                <div>:</div>
-                <div>
-                  <div>{String(timeLeft.minutes).padStart(2, '0')}</div>
-                  <div className="text-sm mt-1">Minutes</div>
-                </div>
-                <div>:</div>
-                <div>
-                  <div>{String(timeLeft.seconds).padStart(2, '0')}</div>
-                  <div className="text-sm mt-1">Seconds</div>
-                </div>
+            <div className="grid grid-cols-4 gap-4 justify-center text-center text-2xl sm:text-4xl font-bold tracking-widest mb-10">
+              <div>
+                <div>{String(timeLeft.days).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Days</div>
+              </div>
+              <div>
+                <div>{String(timeLeft.hours).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Hours</div>
+              </div>
+              <div>
+                <div>{String(timeLeft.minutes).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Minutes</div>
+              </div>
+              <div>
+                <div>{String(timeLeft.seconds).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Seconds</div>
               </div>
             </div>
           ) : (
