@@ -4,12 +4,12 @@ export default function App() {
   const [timeLeft, setTimeLeft] = useState({});
 
   useEffect(() => {
-    const countdownDate = new Date("2024-04-01T00:00:00-04:00").getTime();
+    const countdownDate = new Date("2025-04-01T00:00:00-04:00").getTime();
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;
 
-      if (distance < 0) {
+      if (distance <= 0) {
         clearInterval(timer);
         setTimeLeft(null);
       } else {
@@ -53,13 +53,16 @@ export default function App() {
         </p>
 
         {/* Countdown Clock */}
-        {timeLeft ? (
-          <div className="text-2xl font-bold mb-8">
-            Presale starts in: {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
-          </div>
-        ) : (
-          <div className="text-2xl font-bold mb-8">Presale is live now!</div>
-        )}
+        <div className="mb-12">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-300">🔥 Presale Event Countdown 🔥</h3>
+          {timeLeft ? (
+            <div className="text-5xl font-extrabold">
+              {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+            </div>
+          ) : (
+            <div className="text-5xl font-extrabold text-green-400">Presale is LIVE!</div>
+          )}
+        </div>
 
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <a
