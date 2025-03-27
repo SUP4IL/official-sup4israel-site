@@ -1,6 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function App() {
+  const [timeLeft, setTimeLeft] = useState({});
+
+  useEffect(() => {
+    const countdownDate = new Date("2024-04-01T00:00:00-04:00").getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        setTimeLeft(null);
+      } else {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        setTimeLeft({ days, hours, minutes, seconds });
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-900 to-white text-gray-800">
       {/* Navigation */}
@@ -28,6 +51,16 @@ export default function App() {
         <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
           SUP4Israel (S4IL) is an Ethereum token created to support trusted causes in Israel with transparency and impact.
         </p>
+
+        {/* Countdown Clock */}
+        {timeLeft ? (
+          <div className="text-2xl font-bold mb-8">
+            Presale starts in: {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+          </div>
+        ) : (
+          <div className="text-2xl font-bold mb-8">Presale is live now!</div>
+        )}
+
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <a
             href="https://app.uniswap.org"
