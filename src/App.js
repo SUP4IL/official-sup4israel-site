@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useState as useMenuState } from "react";
+import React, { useEffect, useState } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [timeLeft, setTimeLeft] = useState({});
-  const [menuOpen, setMenuOpen] = useMenuState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const countdownDate = new Date("2025-04-01T00:00:00-04:00").getTime();
@@ -39,31 +39,26 @@ export default function App() {
             />
             <h1 className="font-bold text-lg">SUP4Israel (S4IL)</h1>
           </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-6 text-sm">
+          <div className="md:hidden">
+            <button onClick={() => setMenuOpen(!menuOpen)}>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          <div className={`space-x-6 text-sm hidden md:flex`}>
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#contact" className="hover:underline">Contact</a>
-            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline">X</a>
+            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-blue-400">Follow us on X</a>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white focus:outline-none"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? "✕" : "☰"}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
         {menuOpen && (
-          <div className="md:hidden mt-2 space-y-2 text-center">
-            <a href="#token" className="block hover:underline">Token</a>
-            <a href="#about" className="block hover:underline">About</a>
-            <a href="#contact" className="block hover:underline">Contact</a>
-            <a href="https://x.com/SUP4IL" target="_blank" className="block hover:underline">X</a>
+          <div className="md:hidden px-4 py-2 flex flex-col space-y-2">
+            <a href="#token" className="hover:underline">Token</a>
+            <a href="#about" className="hover:underline">About</a>
+            <a href="#contact" className="hover:underline">Contact</a>
+            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-lg text-blue-400 bg-white text-black px-4 py-2 rounded-lg text-center">Follow us on X</a>
           </div>
         )}
       </nav>
@@ -77,45 +72,44 @@ export default function App() {
         }}
       >
         <div className="bg-black bg-opacity-70 py-16 px-6 rounded-lg max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-wide">THE PRESALE IS COMING</h2>
-          <p className="text-base md:text-lg text-gray-300 mb-10">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide">THE PRESALE IS COMING</h2>
+          <p className="text-lg text-gray-300 mb-10">
             Be among the first to join the presale of 1,000,000 tokens. Your chance to support a purpose-driven movement for Israel and crypto transparency.
           </p>
 
-          {/* Countdown Styled like Mercedes */}
           {timeLeft ? (
-            <div className="text-center text-2xl md:text-4xl font-bold tracking-widest mb-10">
-              <div className="flex justify-center space-x-4 md:space-x-6">
+            <div className="text-center text-4xl md:text-5xl font-bold tracking-widest mb-10">
+              <div className="flex flex-wrap justify-center space-x-4 md:space-x-6">
                 <div>
                   <div>{String(timeLeft.days).padStart(2, '0')}</div>
-                  <div className="text-xs md:text-sm mt-1">Days</div>
+                  <div className="text-sm mt-1">Days</div>
                 </div>
                 <div>:</div>
                 <div>
                   <div>{String(timeLeft.hours).padStart(2, '0')}</div>
-                  <div className="text-xs md:text-sm mt-1">Hours</div>
+                  <div className="text-sm mt-1">Hours</div>
                 </div>
                 <div>:</div>
                 <div>
                   <div>{String(timeLeft.minutes).padStart(2, '0')}</div>
-                  <div className="text-xs md:text-sm mt-1">Minutes</div>
+                  <div className="text-sm mt-1">Minutes</div>
                 </div>
                 <div>:</div>
                 <div>
                   <div>{String(timeLeft.seconds).padStart(2, '0')}</div>
-                  <div className="text-xs md:text-sm mt-1">Seconds</div>
+                  <div className="text-sm mt-1">Seconds</div>
                 </div>
               </div>
             </div>
           ) : (
-            <div className="text-4xl font-extrabold text-green-400">Presale is LIVE!</div>
+            <div className="text-5xl font-extrabold text-green-400">Presale is LIVE!</div>
           )}
 
           <a
             href="https://app.uniswap.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 border border-white rounded-lg font-semibold text-white hover:bg-white hover:text-black transition"
+            className="inline-block px-8 py-4 border border-white rounded-lg font-semibold text-white hover:bg-white hover:text-black transition"
           >
             Keep me updated
           </a>
@@ -143,7 +137,7 @@ export default function App() {
       <section id="about" className="bg-black py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">About S4IL</h2>
-          <p className="text-gray-300 text-base md:text-lg">
+          <p className="text-gray-300 text-lg">
             SUP4Israel is a decentralized crypto project built to support trusted causes in Israel. Each transaction contributes to impact. Built by the people, for the people — on the blockchain.
           </p>
         </div>
@@ -185,6 +179,11 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-black text-white py-6 text-center">
         <p className="text-sm">© {new Date().getFullYear()} SUP4Israel — Built on Ethereum, powered by unity.</p>
+        <p className="mt-4">
+          <a href="https://x.com/SUP4IL" target="_blank" className="inline-block px-6 py-2 mt-2 text-black bg-blue-400 rounded-lg font-semibold shadow hover:bg-blue-500 transition">
+            Follow us on X
+          </a>
+        </p>
       </footer>
 
       {/* Analytics */}
