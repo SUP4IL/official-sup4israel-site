@@ -50,9 +50,7 @@ export default function App() {
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#contact" className="hover:underline">Contact</a>
-            <a href="#howtobuy" className="hover:underline">How to Buy</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-blue-400">Follow us on X</a>
-            <a href="https://app.uniswap.org/#/swap?outputCurrency=0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d" target="_blank" className="hover:underline font-semibold text-green-400">Trade S4IL</a>
           </div>
         </div>
         {menuOpen && (
@@ -60,38 +58,136 @@ export default function App() {
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#contact" className="hover:underline">Contact</a>
-            <a href="#howtobuy" className="hover:underline">How to Buy</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-lg text-blue-400 bg-white text-black px-4 py-2 rounded-lg text-center">Follow us on X</a>
-            <a href="https://app.uniswap.org/#/swap?outputCurrency=0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d" target="_blank" className="hover:underline font-semibold text-lg text-green-400 bg-white text-black px-4 py-2 rounded-lg text-center">Trade S4IL</a>
           </div>
         )}
       </nav>
 
       {/* Hero with Countdown */}
-      ...
+      <section
+        className="text-center py-24 px-4 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1601632437633-037dedf3c9ed?auto=format&fit=crop&w=1920&q=80')"
+        }}
+      >
+        <div className="bg-black bg-opacity-70 py-16 px-6 rounded-lg max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide">THE PRESALE IS COMING</h2>
+          <p className="text-lg text-gray-300 mb-10">
+            Be among the first to join the presale of 1,000,000 tokens. Your chance to support a purpose-driven movement for Israel and crypto transparency.
+          </p>
+
+          <a
+            href="https://x.com/SUP4IL"
+            target="_blank"
+            className="inline-block mb-6 px-5 py-2 text-sm text-black bg-blue-400 rounded-md font-medium shadow hover:bg-blue-500 transition"
+          >
+            Follow us on X
+          </a>
+
+          {timeLeft ? (
+            <div className="grid grid-cols-4 gap-4 justify-center text-center text-2xl sm:text-4xl font-bold tracking-widest mb-10">
+              <div>
+                <div>{String(timeLeft.days).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Days</div>
+              </div>
+              <div>
+                <div>{String(timeLeft.hours).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Hours</div>
+              </div>
+              <div>
+                <div>{String(timeLeft.minutes).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Minutes</div>
+              </div>
+              <div>
+                <div>{String(timeLeft.seconds).padStart(2, '0')}</div>
+                <div className="text-sm mt-1">Seconds</div>
+              </div>
+            </div>
+          ) : (
+            <div className="text-5xl font-extrabold text-green-400">Presale is LIVE!</div>
+          )}
+
+          <a
+            href="https://app.uniswap.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 border border-white rounded-lg font-semibold text-white hover:bg-white hover:text-black transition"
+          >
+            Keep me updated
+          </a>
+        </div>
+      </section>
+
+      {/* Token Info */}
+      <section id="token" className="py-20 px-4 bg-gray-900 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Token Details</h2>
+          <p className="text-gray-300 mb-2">Smart contract on Ethereum. Transparency you can verify.</p>
+          <p className="text-blue-500 text-sm">Contract: 0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d</p>
+          <a
+            href="https://etherscan.io/token/0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d"
+            className="text-blue-400 underline text-sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Etherscan
+          </a>
+        </div>
+      </section>
 
       {/* About Section */}
-      ...
-
-      {/* How to Buy Section */}
-      <section id="howtobuy" className="bg-black py-20 px-4 text-center">
+      <section id="about" className="bg-black py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-6">How to Buy S4IL</h2>
-          <ol className="text-left text-gray-300 text-lg space-y-4">
-            <li><span className="text-green-400 font-semibold">Step 1:</span> Install a crypto wallet like MetaMask and connect it to the Ethereum network.</li>
-            <li><span className="text-green-400 font-semibold">Step 2:</span> Add ETH to your wallet (this will be used to purchase S4IL).</li>
-            <li><span className="text-green-400 font-semibold">Step 3:</span> Go to <a href="https://app.uniswap.org/#/swap?outputCurrency=0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d" target="_blank" className="text-blue-400 underline">Uniswap</a> and connect your wallet.</li>
-            <li><span className="text-green-400 font-semibold">Step 4:</span> Swap ETH for S4IL. Confirm the token address: <code className="bg-gray-800 p-1 rounded">0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d</code></li>
-            <li><span className="text-green-400 font-semibold">Step 5:</span> Confirm the transaction in your wallet and you're done!</li>
-          </ol>
+          <h2 className="text-3xl font-bold text-white mb-6">About S4IL</h2>
+          <p className="text-gray-300 text-lg">
+            SUP4Israel is a decentralized crypto project built to support trusted causes in Israel. Each transaction contributes to impact. Built by the people, for the people — on the blockchain.
+          </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      ...
+      <section id="contact" className="py-20 px-4 bg-gray-900">
+        <div className="max-w-xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full border border-gray-600 p-3 rounded bg-black text-white"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="w-full border border-gray-600 p-3 rounded bg-black text-white"
+            />
+            <textarea
+              placeholder="Message"
+              className="w-full border border-gray-600 p-3 rounded bg-black text-white"
+              rows="4"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-white text-black w-full py-3 rounded font-semibold hover:bg-gray-300 transition"
+            >
+              Send
+            </button>
+          </form>
+          <p className="text-center text-sm text-gray-400 mt-4">
+            Or email: <a href="mailto:official.sup4israel@gmail.com" className="text-blue-400 underline">official.sup4israel@gmail.com</a>
+          </p>
+        </div>
+      </section>
 
       {/* Footer */}
-      ...
+      <footer className="bg-black text-white py-6 text-center">
+        <p className="text-sm">© {new Date().getFullYear()} SUP4Israel — Built on Ethereum, powered by unity.</p>
+        <p className="mt-4">
+          <a href="https://x.com/SUP4IL" target="_blank" className="inline-block px-6 py-2 mt-2 text-black bg-blue-400 rounded-lg font-semibold shadow hover:bg-blue-500 transition">
+            Follow us on X
+          </a>
+        </p>
+      </footer>
 
       {/* Analytics */}
       <Analytics />
