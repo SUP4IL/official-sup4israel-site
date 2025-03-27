@@ -146,6 +146,35 @@ export default function App() {
         </div>
       </section>
 
+      {/* How to Buy Section */}
+      <section id="howtobuy" className="bg-black py-20 px-4 text-center border-t border-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-10">How to Buy S4IL</h2>
+          <div className="grid md:grid-cols-5 gap-6 text-left">
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 1</h3>
+              <p className="text-gray-300">Download MetaMask or another crypto wallet extension.</p>
+            </div>
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 2</h3>
+              <p className="text-gray-300">Buy ETH from an exchange or send it to your wallet.</p>
+            </div>
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 3</h3>
+              <p className="text-gray-300">Go to <a href="https://app.uniswap.org" target="_blank" className="underline text-blue-400">Uniswap</a>.</p>
+            </div>
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 4</h3>
+              <p className="text-gray-300">Paste our token address:<br /><span className="text-sm text-blue-500 break-all">0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d</span></p>
+            </div>
+            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
+              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 5</h3>
+              <p className="text-gray-300">Swap ETH for S4IL. Confirm and you're done!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-gray-900">
         <div className="max-w-xl mx-auto text-center">
