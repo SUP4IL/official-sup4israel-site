@@ -41,13 +41,20 @@ export default function App() {
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#contact" className="hover:underline">Contact</a>
+            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline">X</a>
           </div>
         </div>
       </nav>
 
       {/* Hero with Countdown */}
-      <section className="text-center py-24 px-4 bg-black">
-        <div className="max-w-4xl mx-auto">
+      <section
+        className="text-center py-24 px-4 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1601632437633-037dedf3c9ed?auto=format&fit=crop&w=1920&q=80')"
+        }}
+      >
+        <div className="bg-black bg-opacity-70 py-16 px-6 rounded-lg max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide">THE PRESALE IS COMING</h2>
           <p className="text-lg text-gray-300 mb-10">
             Be among the first to join the presale of 1,000,000 tokens. Your chance to support a purpose-driven movement for Israel and crypto transparency.
@@ -117,13 +124,6 @@ export default function App() {
           <p className="text-gray-300 text-lg">
             SUP4Israel is a decentralized crypto project built to support trusted causes in Israel. Each transaction contributes to impact. Built by the people, for the people — on the blockchain.
           </p>
-          <div className="mt-8">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Westernwall_jerusalem_night.jpg/640px-Westernwall_jerusalem_night.jpg"
-              alt="Jerusalem"
-              className="mx-auto rounded-lg shadow-lg w-full max-w-md"
-            />
-          </div>
         </div>
       </section>
 
