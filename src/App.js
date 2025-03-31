@@ -48,7 +48,6 @@ export default function App() {
           </div>
           <div className={`space-x-6 text-sm hidden md:flex`}>
             <a href="#token" className="hover:underline">Token</a>
-            <a href="#tokenomics" className="hover:underline">Tokenomics</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
@@ -58,7 +57,6 @@ export default function App() {
         {menuOpen && (
           <div className="md:hidden px-4 py-2 flex flex-col space-y-2">
             <a href="#token" className="hover:underline">Token</a>
-            <a href="#tokenomics" className="hover:underline">Tokenomics</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
@@ -138,25 +136,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Tokenomics */}
-      <section id="tokenomics" className="py-20 px-4 bg-gray-900 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4">Tokenomics</h2>
-          <p className="text-gray-300 mb-4">
-            Total Supply: 1,000,000 S4IL tokens
-          </p>
-          <p className="text-gray-300 mb-4">
-            Presale Allocation: 500,000 tokens (50%)<br />
-            Team: 200,000 tokens (20%)<br />
-            Marketing: 150,000 tokens (15%)<br />
-            Liquidity: 150,000 tokens (15%)
-          </p>
-          <p className="text-gray-300">
-            Funds raised will be used to support trusted causes in Israel, with 10% allocated to development and marketing.
-          </p>
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="about" className="bg-black py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
@@ -213,17 +192,6 @@ export default function App() {
               title="S4IL Token Sale"
             ></iframe>
           </div>
-          <p className="text-gray-300 mt-6">
-            Want to embed this token sale on your own site? Copy the HTML code below:
-          </p>
-          <div className="bg-gray-800 p-4 rounded-lg text-left mt-4">
-            <code className="text-sm text-blue-300 break-all">
-              <iframe src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=F7FAFF&bgColorSecondary=FFFFFF&borderColor=EBF0FF&ctaPrimary=03A9F4&ctaFontColor=FFFFFF&fontColorPrimary=000000&fontColorSecondary=6B7483" width="100%" height="1000px" frameborder="0" name="tokensale"></iframe>
-            </code>
-          </div>
-          <p className="text-gray-300 mt-4">
-            To preview all states of token sale add <span className="text-blue-400">&previewAllStates=true</span> to the iframe URL. Remember to remove it before publishing the sale.
-          </p>
         </div>
       </section>
 
