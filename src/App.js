@@ -175,6 +175,24 @@ export default function App() {
         </div>
       </section>
 
+      {/* Token Sale Embed Section */}
+      <section id="tokensale" className="bg-black py-20 px-4 text-center border-t border-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-6">Embed Token Sale</h2>
+          <p className="text-gray-300 mb-4">
+            Copy the HTML code below and paste it into your website to embed the token sale
+          </p>
+          <p className="text-gray-300 mb-6">
+            To preview all states of token sale add <span className="text-blue-400">&previewAllStates=true</span> to the iframe URL. Remember to remove it before publishing the sale.
+          </p>
+          <div className="bg-gray-800 p-4 rounded-lg text-left">
+            <code className="text-sm text-blue-300 break-all">
+              &lt;iframe src="https://tokentool.bitbond.com/tokensale/0xFA44853B8923A355dbEF982a60EE331953ED5CEd?chainId=1" width="100%" height="1000px" frameborder="0" name="tokensale"&gt;&lt;/iframe&gt;
+            </code>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 bg-gray-900">
         <div className="max-w-xl mx-auto text-center">
