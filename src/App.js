@@ -22,7 +22,7 @@ export default function App() {
         setTimeLeft({ days, hours, minutes, seconds });
       }
     }, 1000);
-
+    
     return () => clearInterval(timer);
   }, []);
 
