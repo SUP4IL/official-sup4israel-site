@@ -49,6 +49,7 @@ export default function App() {
           <div className={`space-x-6 text-sm hidden md:flex`}>
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
+            <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-blue-400">Follow us on X</a>
           </div>
@@ -57,6 +58,7 @@ export default function App() {
           <div className="md:hidden px-4 py-2 flex flex-col space-y-2">
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
+            <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-lg text-blue-400 bg-white text-black px-4 py-2 rounded-lg text-center">Follow us on X</a>
           </div>
@@ -187,7 +189,7 @@ export default function App() {
           </p>
           <div className="bg-gray-800 p-4 rounded-lg text-left">
             <code className="text-sm text-blue-300 break-all">
-              &lt;iframe src="https://tokentool.bitbond.com/tokensale/0xFA44853B8923A355dbEF982a60EE331953ED5CEd?chainId=1" width="100%" height="1000px" frameborder="0" name="tokensale"&gt;&lt;/iframe&gt;
+              &lt;iframe src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=F7FAFF&bgColorSecondary=FFFFFF&borderColor=EBF0FF&ctaPrimary=03A9F4&ctaFontColor=FFFFFF&fontColorPrimary=000000&fontColorSecondary=6B7483" width="100%" height="1000px" frameborder="0" name="tokensale"&gt;&lt;/iframe&gt;
             </code>
           </div>
         </div>
