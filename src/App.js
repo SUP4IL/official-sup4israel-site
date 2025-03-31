@@ -48,6 +48,7 @@ export default function App() {
           </div>
           <div className={`space-x-6 text-sm hidden md:flex`}>
             <a href="#token" className="hover:underline">Token</a>
+            <a href="#tokenomics" className="hover:underline">Tokenomics</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
@@ -57,6 +58,7 @@ export default function App() {
         {menuOpen && (
           <div className="md:hidden px-4 py-2 flex flex-col space-y-2">
             <a href="#token" className="hover:underline">Token</a>
+            <a href="#tokenomics" className="hover:underline">Tokenomics</a>
             <a href="#about" className="hover:underline">About</a>
             <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
@@ -111,12 +113,10 @@ export default function App() {
           )}
 
           <a
-            href="https://app.uniswap.org"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#tokensale"
             className="inline-block px-8 py-4 border border-white rounded-lg font-semibold text-white hover:bg-white hover:text-black transition"
           >
-            Keep me updated
+            Join the Presale
           </a>
         </div>
       </section>
@@ -135,6 +135,25 @@ export default function App() {
           >
             View on Etherscan
           </a>
+        </div>
+      </section>
+
+      {/* Tokenomics */}
+      <section id="tokenomics" className="py-20 px-4 bg-gray-900 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4">Tokenomics</h2>
+          <p className="text-gray-300 mb-4">
+            Total Supply: 1,000,000 S4IL tokens
+          </p>
+          <p className="text-gray-300 mb-4">
+            Presale Allocation: 500,000 tokens (50%)<br />
+            Team: 200,000 tokens (20%)<br />
+            Marketing: 150,000 tokens (15%)<br />
+            Liquidity: 150,000 tokens (15%)
+          </p>
+          <p className="text-gray-300">
+            Funds raised will be used to support trusted causes in Israel, with 10% allocated to development and marketing.
+          </p>
         </div>
       </section>
 
@@ -177,21 +196,34 @@ export default function App() {
         </div>
       </section>
 
-      {/* Token Sale Embed Section */}
+      {/* Token Sale Section */}
       <section id="tokensale" className="bg-black py-20 px-4 text-center border-t border-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-6">Embed Token Sale</h2>
-          <p className="text-gray-300 mb-4">
-            Copy the HTML code below and paste it into your website to embed the token sale
-          </p>
+          <h2 className="text-3xl font-bold text-white mb-6">Join the Token Sale</h2>
           <p className="text-gray-300 mb-6">
-            To preview all states of token sale add <span className="text-blue-400">&previewAllStates=true</span> to the iframe URL. Remember to remove it before publishing the sale.
+            Connect your wallet below to participate in the S4IL token sale.
           </p>
-          <div className="bg-gray-800 p-4 rounded-lg text-left">
+          <div className="bg-gray-800 p-4 rounded-lg">
+            <iframe
+              src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=F7FAFF&bgColorSecondary=FFFFFF&borderColor=EBF0FF&ctaPrimary=03A9F4&ctaFontColor=FFFFFF&fontColorPrimary=000000&fontColorSecondary=6B7483"
+              width="100%"
+              height="1000px"
+              frameBorder="0"
+              name="tokensale"
+              title="S4IL Token Sale"
+            ></iframe>
+          </div>
+          <p className="text-gray-300 mt-6">
+            Want to embed this token sale on your own site? Copy the HTML code below:
+          </p>
+          <div className="bg-gray-800 p-4 rounded-lg text-left mt-4">
             <code className="text-sm text-blue-300 break-all">
-              &lt;iframe src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=F7FAFF&bgColorSecondary=FFFFFF&borderColor=EBF0FF&ctaPrimary=03A9F4&ctaFontColor=FFFFFF&fontColorPrimary=000000&fontColorSecondary=6B7483" width="100%" height="1000px" frameborder="0" name="tokensale"&gt;&lt;/iframe&gt;
+              <iframe src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=F7FAFF&bgColorSecondary=FFFFFF&borderColor=EBF0FF&ctaPrimary=03A9F4&ctaFontColor=FFFFFF&fontColorPrimary=000000&fontColorSecondary=6B7483" width="100%" height="1000px" frameborder="0" name="tokensale"></iframe>
             </code>
           </div>
+          <p className="text-gray-300 mt-4">
+            To preview all states of token sale add <span className="text-blue-400">&previewAllStates=true</span> to the iframe URL. Remember to remove it before publishing the sale.
+          </p>
         </div>
       </section>
 
@@ -228,9 +260,23 @@ export default function App() {
         </div>
       </section>
 
+      {/* Disclaimer Section */}
+      <section id="disclaimer" className="py-20 px-4 bg-black text-center border-t border-gray-800">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-6">Disclaimer</h2>
+          <p className="text-gray-300 text-lg">
+            Participating in the S4IL token sale involves risks, including the potential loss of funds. Cryptocurrencies are highly volatile, and you should conduct your own research (DYOR) before participating. SUP4Israel is not responsible for any losses incurred.
+          </p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-black text-white py-6 text-center">
         <p className="text-sm">© {new Date().getFullYear()} SUP4Israel — Built on Ethereum, powered by unity.</p>
+        <p className="text-sm mt-2">
+          <a href="/terms" className="text-blue-400 underline mx-2">Terms of Service</a> | 
+          <a href="/privacy" className="text-blue-400 underline mx-2">Privacy Policy</a>
+        </p>
         <p className="mt-4">
           <a href="https://x.com/SUP4IL" target="_blank" className="inline-block px-6 py-2 mt-2 text-black bg-blue-400 rounded-lg font-semibold shadow hover:bg-blue-500 transition">
             Follow us on X
