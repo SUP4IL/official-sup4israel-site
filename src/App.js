@@ -23,6 +23,22 @@ export default function App() {
       }
     }, 1000);
 
+    // Check for successful purchase via URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const purchaseStatus = urlParams.get('purchase');
+    const txHash = urlParams.get('txHash');
+    const amount = urlParams.get('amount');
+
+    if (purchaseStatus === 'success' && txHash && amount) {
+      // Fire X Purchase event
+      window.twq('event', 'tw-petn8-petn9', {
+        value: amount, // Purchase value in ETH
+        currency: 'ETH', // Currency of the purchase
+        contents: 'S4IL Tokens', // Description of the purchased item
+        conversion_id: txHash // Ethereum transaction hash
+      });
+    }
+
     return () => clearInterval(timer);
   }, []);
 
@@ -141,121 +157,45 @@ export default function App() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">About S4IL</h2>
           <p className="text-gray-300 text-lg mb-4">
-            SUP4Israel is a decentralized crypto project built to support trusted causes in Israel. Each transaction contributes to impact. Built by the people, for the people — on the blockchain.
-          </p>
-          <p className="text-gray-300 text-lg">
-            A significant portion of the profits from transaction fees will be donated to good causes in Israel that focus on areas like nature preservation and the restoration of old cities, rather than funding the war. We are committed to ensuring that our contributions do not sponsor the war, focusing instead on positive, non-military initiatives that benefit Israel’s heritage and environment.
+            SUP4Israel is a decentralized crypto project built to support trusted causes in Israel, focusing on nature preservation and the restoration of old cities. A big part of our profits goes to these causes, not to war.
           </p>
         </div>
       </section>
 
-      {/* How to Buy Section */}
-      <section id="howtobuy" className="bg-black py-20 px-4 text-center border-t border-gray-800">
+      {/* Token Sale */}
+      <section id="tokensale" className="bg-gray-900 py-20 px-4 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-10">How to Buy S4IL</h2>
-          <div className="grid md:grid-cols-5 gap-6 text-left">
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 1</h3>
-              <p className="text-gray-300">Download MetaMask or another crypto wallet extension.</p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 2</h3>
-              <p className="text-gray-300">Buy ETH from an exchange or send it to your wallet.</p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 3</h3>
-              <p className="text-gray-300">Go to <a href="https://app.uniswap.org" target="_blank" className="underline text-blue-400">Uniswap</a>.</p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 4</h3>
-              <p className="text-gray-300">Paste our token address:<br /><span className="text-sm text-blue-500 break-all">0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d</span></p>
-            </div>
-            <div className="bg-gray-900 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-lg font-semibold text-green-400 mb-2">Step 5</h3>
-              <p className="text-gray-300">Swap ETH for S4IL. Confirm and you're done!</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Token Sale Section */}
-      <section id="tokensale" className="bg-black py-20 px-4 text-center border-t border-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-6">Join the Token Sale</h2>
-          <p className="text-gray-300 mb-6">
-            Connect your wallet below to participate in the S4IL token sale.
+          <h2 className="text-3xl font-bold text-white mb-6">Token Sale</h2>
+          <p className="text-gray-300 text-lg mb-10">
+            Join the S4IL token presale and be part of a movement that supports Israel’s heritage and nature.
           </p>
-          <div className="bg-gray-800 p-4 rounded-lg">
-            <iframe
-              src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=1F2937&bgColorSecondary=111827&borderColor=374151&ctaPrimary=60A5FA&ctaFontColor=FFFFFF&fontColorPrimary=FFFFFF&fontColorSecondary=D1D5DB"
-              width="100%"
-              height="1000px"
-              frameBorder="0"
-              name="tokensale"
-              title="S4IL Token Sale"
-            ></iframe>
-          </div>
+          <iframe
+            className="w-full h-[600px] sm:h-[700px] border-0"
+            src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=1F2937&bgColorSecondary=111827&borderColor=374151&ctaPrimary=60A5FA&ctaFontColor=FFFFFF&fontColorPrimary=FFFFFF&fontColorSecondary=D1D5DB"
+          ></iframe>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-gray-900">
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full border border-gray-600 p-3 rounded bg-black text-white"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full border border-gray-600 p-3 rounded bg-black text-white"
-            />
-            <textarea
-              placeholder="Message"
-              className="w-full border border-gray-600 p-3 rounded bg-black text-white"
-              rows="4"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-white text-black w-full py-3 rounded font-semibold hover:bg-gray-300 transition"
-            >
-              Send
-            </button>
-          </form>
-          <p className="text-center text-sm text-gray-400 mt-4">
-            Or email: <a href="mailto:official.sup4israel@gmail.com" className="text-blue-400 underline">official.sup4israel@gmail.com</a>
-          </p>
-        </div>
-      </section>
-
-      {/* Disclaimer Section */}
-      <section id="disclaimer" className="py-20 px-4 bg-black text-center border-t border-gray-800">
+      <section id="contact" className="bg-black py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-6">Disclaimer</h2>
-          <p className="text-gray-300 text-lg">
-            Participating in the S4IL token sale involves risks, including the potential loss of funds. Cryptocurrencies are highly volatile, and you should conduct your own research (DYOR) before participating. SUP4Israel is not responsible for any losses incurred.
+          <h2 className="text-3xl font-bold text-white mb-6">Contact Us</h2>
+          <p className="text-gray-300 text-lg mb-4">
+            Have questions? Reach out to us on X or via email.
+          </p>
+          <a
+            href="https://x.com/SUP4IL"
+            target="_blank"
+            className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition"
+          >
+            Contact on X
+          </a>
+          <p className="text-gray-300 text-lg mt-4">
+            Email: <a href="mailto:support@sup4israel.com" className="text-blue-400 underline">support@sup4israel.com</a>
           </p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black text-white py-6 text-center">
-        <p className="text-sm">© {new Date().getFullYear()} SUP4Israel — Built on Ethereum, powered by unity.</p>
-        <p className="text-sm mt-2">
-          <a href="/terms" className="text-blue-400 underline mx-2">Terms of Service</a> | 
-          <a href="/privacy" className="text-blue-400 underline mx-2">Privacy Policy</a>
-        </p>
-        <p className="mt-4">
-          <a href="https://x.com/SUP4IL" target="_blank" className="inline-block px-6 py-2 mt-2 text-black bg-blue-400 rounded-lg font-semibold shadow hover:bg-blue-500 transition">
-            Follow us on X
-          </a>
-        </p>
-      </footer>
-
-      {/* Analytics */}
       <Analytics />
     </main>
   );
