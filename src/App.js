@@ -22,7 +22,7 @@ export default function App() {
         setTimeLeft({ days, hours, minutes, seconds });
       }
     }, 1000);
-    
+
     return () => clearInterval(timer);
   }, []);
 
@@ -107,7 +107,7 @@ export default function App() {
               </div>
             </div>
           ) : (
-            <div className="text-5xl font-extrabold text-green-400">Presale is LIVE!</div>
+            <div className="text-5xl font-extrabold text-green-400">Presale is LIVE Now!</div>
           )}
 
           <a
@@ -140,8 +140,11 @@ export default function App() {
       <section id="about" className="bg-black py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">About S4IL</h2>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg mb-4">
             SUP4Israel is a decentralized crypto project built to support trusted causes in Israel. Each transaction contributes to impact. Built by the people, for the people — on the blockchain.
+          </p>
+          <p className="text-gray-300 text-lg">
+            A significant portion of the profits from transaction fees will be donated to good causes in Israel that focus on areas like nature preservation and the restoration of old cities, rather than funding the war. We are committed to ensuring that our contributions do not sponsor the war, focusing instead on positive, non-military initiatives that benefit Israel’s heritage and environment.
           </p>
         </div>
       </section>
@@ -184,7 +187,7 @@ export default function App() {
           </p>
           <div className="bg-gray-800 p-4 rounded-lg">
             <iframe
-              src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=F7FAFF&bgColorSecondary=FFFFFF&borderColor=EBF0FF&ctaPrimary=03A9F4&ctaFontColor=FFFFFF&fontColorPrimary=000000&fontColorSecondary=6B7483"
+              src="https://tokentool.bitbond.com/tokensale/0xfa44853b8923a355dbef982a60ee331953ed5ced?chainId=1&bgColorPrimary=1F2937&bgColorSecondary=111827&borderColor=374151&ctaPrimary=60A5FA&ctaFontColor=FFFFFF&fontColorPrimary=FFFFFF&fontColorSecondary=D1D5DB"
               width="100%"
               height="1000px"
               frameBorder="0"
