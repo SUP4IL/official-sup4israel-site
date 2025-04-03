@@ -65,6 +65,7 @@ export default function App() {
           <div className={`space-x-6 text-sm hidden md:flex`}>
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
+            <a href="#team" className="hover:underline">Team</a>
             <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-blue-400">Follow us on X</a>
@@ -74,6 +75,7 @@ export default function App() {
           <div className="md:hidden px-4 py-2 flex flex-col space-y-2">
             <a href="#token" className="hover:underline">Token</a>
             <a href="#about" className="hover:underline">About</a>
+            <a href="#team" className="hover:underline">Team</a>
             <a href="#tokensale" className="hover:underline">Token Sale</a>
             <a href="#contact" className="hover:underline">Contact</a>
             <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-lg text-blue-400 bg-white text-black px-4 py-2 rounded-lg text-center">Follow us on X</a>
@@ -159,6 +161,32 @@ export default function App() {
           <p className="text-gray-300 text-lg mb-4">
             SUP4Israel is a decentralized crypto project built to support trusted causes in Israel, focusing on nature preservation and the restoration of old cities. A big part of our profits goes to these causes, not to war.
           </p>
+          <a
+            href="https://drive.google.com/file/d/1qW5zX8kY9mN0pQ2rT4uV7wX8yZ9aB0c/view?usp=sharing"
+            className="text-blue-400 underline text-sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our Whitepaper
+          </a>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section id="team" className="bg-gray-900 py-20 px-4 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-6">Our Team</h2>
+          <p className="text-gray-300 text-lg mb-4">
+            SUP4Israel (S4IL) is led by Silver Jared Bijlsma, a dedicated founder committed to transparency and impact.
+          </p>
+          <a
+            href="[Replace with your S4IL LinkedIn Company Page URL]"
+            className="text-blue-400 underline text-sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Follow us on LinkedIn
+          </a>
         </div>
       </section>
 
@@ -181,16 +209,25 @@ export default function App() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">Contact Us</h2>
           <p className="text-gray-300 text-lg mb-4">
-            Have questions? Reach out to us on X or via email.
+            Have questions? Reach out to us on X, LinkedIn, or via email.
           </p>
-          <a
-            href="https://x.com/SUP4IL"
-            target="_blank"
-            className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition"
-          >
-            Contact on X
-          </a>
-          <p className="text-gray-300 text-lg mt-4">
+          <div className="flex justify-center gap-4 mb-4">
+            <a
+              href="https://x.com/SUP4IL"
+              target="_blank"
+              className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition"
+            >
+              Contact on X
+            </a>
+            <a
+              href="[Replace with your S4IL LinkedIn Company Page URL]"
+              target="_blank"
+              className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition"
+            >
+              Contact on LinkedIn
+            </a>
+          </div>
+          <p className="text-gray-300 text-lg">
             Email: <a href="mailto:support@sup4israel.com" className="text-blue-400 underline">support@sup4israel.com</a>
           </p>
         </div>
