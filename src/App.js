@@ -92,9 +92,9 @@ export default function App() {
         }}
       >
         <div className="bg-black bg-opacity-70 py-16 px-6 rounded-lg max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide">THE PRESALE IS COMING</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide">PRESALE IS LIVE!</h2>
           <p className="text-lg text-gray-300 mb-10">
-            Be among the first to join the presale of 500,000 tokens. Your chance to support a purpose-driven movement for Israel and crypto transparency.
+            Join the ongoing presale of 500,000 S4IL tokens and support Israel’s trusted causes. Your participation helps us achieve transparency, now enhanced with our Etherscan listing update!
           </p>
 
           <a
