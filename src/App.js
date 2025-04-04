@@ -171,6 +171,25 @@ export default function App() {
           >
             Read our Whitepaper
           </a>
+          {/* Images for Nature Preservation and Cultural Restoration */}
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col items-center">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                alt="Nature Preservation in Israel"
+                className="w-full h-48 object-cover rounded-lg shadow-lg"
+              />
+              <p className="text-gray-400 text-sm mt-2">Nature Preservation in Israel</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <img
+                src="https://images.unsplash.com/photo-1593604340847-4d1d767edba7?auto=format&fit=crop&w=800&q=80"
+                alt="Cultural Restoration in Israel"
+                className="w-full h-48 object-cover rounded-lg shadow-lg"
+              />
+              <p className="text-gray-400 text-sm mt-2">Cultural Restoration in Israel</p>
+            </div>
+          </div>
         </div>
       </section>
 
