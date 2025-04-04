@@ -45,7 +45,7 @@ export default function App() {
   return (
     <main className="min-h-screen bg-black text-white font-sans scroll-smooth">
       {/* Navigation */}
-      <nav className="bg-black text-white py-4 shadow-md sticky top-0 z-50">
+      <nav className="bg-black text-white py-4 shadow-lg sticky top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <img
@@ -63,44 +63,46 @@ export default function App() {
             </button>
           </div>
           <div className={`space-x-6 text-sm hidden md:flex`}>
-            <a href="#token" className="hover:underline">Token</a>
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#team" className="hover:underline">Team</a>
-            <a href="#tokensale" className="hover:underline">Token Sale</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-blue-400">Follow us on X</a>
+            <a href="#token" className="hover:underline hover:text-blue-400 transition duration-300">Token</a>
+            <a href="#about" className="hover:underline hover:text-blue-400 transition duration-300">About</a>
+            <a href="#team" className="hover:underline hover:text-blue-400 transition duration-300">Team</a>
+            <a href="#tokensale" className="hover:underline hover:text-blue-400 transition duration-300">Token Sale</a>
+            <a href="#contact" className="hover:underline hover:text-blue-400 transition duration-300">Contact</a>
+            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-blue-400 hover:text-blue-500 transition duration-300">Follow us on X</a>
           </div>
         </div>
         {menuOpen && (
           <div className="md:hidden px-4 py-2 flex flex-col space-y-2">
-            <a href="#token" className="hover:underline">Token</a>
-            <a href="#about" className="hover:underline">About</a>
-            <a href="#team" className="hover:underline">Team</a>
-            <a href="#tokensale" className="hover:underline">Token Sale</a>
-            <a href="#contact" className="hover:underline">Contact</a>
-            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-lg text-blue-400 bg-white text-black px-4 py-2 rounded-lg text-center">Follow us on X</a>
+            <a href="#token" className="hover:underline hover:text-blue-400 transition duration-300">Token</a>
+            <a href="#about" className="hover:underline hover:text-blue-400 transition duration-300">About</a>
+            <a href="#team" className="hover:underline hover:text-blue-400 transition duration-300">Team</a>
+            <a href="#tokensale" className="hover:underline hover:text-blue-400 transition duration-300">Token Sale</a>
+            <a href="#contact" className="hover:underline hover:text-blue-400 transition duration-300">Contact</a>
+            <a href="https://x.com/SUP4IL" target="_blank" className="hover:underline font-semibold text-lg text-blue-400 bg-white text-black px-4 py-2 rounded-lg text-center hover:bg-blue-100 transition duration-300">Follow us on X</a>
           </div>
         )}
       </nav>
 
       {/* Hero with Countdown */}
       <section
-        className="text-center py-24 px-4 bg-cover bg-center"
+        className="text-center py-24 px-4 bg-cover bg-center relative"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1601632437633-037dedf3c9ed?auto=format&fit=crop&w=1920&q=80')"
         }}
       >
-        <div className="bg-black bg-opacity-70 py-16 px-6 rounded-lg max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide">PRESALE IS LIVE!</h2>
-          <p className="text-lg text-gray-300 mb-10">
+        {/* Darker Overlay for Better Readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-80"></div>
+        <div className="relative bg-opacity-70 py-16 px-6 rounded-lg max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide text-shadow-lg">PRESALE IS LIVE!</h2>
+          <p className="text-lg text-gray-300 mb-10 leading-relaxed">
             Join the ongoing presale of 500,000 S4IL tokens and support Israel’s trusted causes. Your participation helps us achieve transparency, now enhanced with our Etherscan listing update!
           </p>
 
           <a
             href="https://x.com/SUP4IL"
             target="_blank"
-            className="inline-block mb-6 px-5 py-2 text-sm text-black bg-blue-400 rounded-md font-medium shadow hover:bg-blue-500 transition"
+            className="inline-block mb-6 px-5 py-2 text-sm text-black bg-blue-400 rounded-md font-medium shadow hover:bg-blue-500 transition duration-300"
           >
             Follow us on X
           </a>
@@ -125,12 +127,12 @@ export default function App() {
               </div>
             </div>
           ) : (
-            <div className="text-5xl font-extrabold text-green-400">Presale is LIVE Now!</div>
+            <div className="text-5xl font-extrabold text-green-400 text-shadow-lg">Presale is LIVE Now!</div>
           )}
 
           <a
             href="#tokensale"
-            className="inline-block px-8 py-4 border border-white rounded-lg font-semibold text-white hover:bg-white hover:text-black transition"
+            className="inline-block px-8 py-4 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg transform hover:scale-105"
           >
             Join the Presale
           </a>
@@ -138,14 +140,14 @@ export default function App() {
       </section>
 
       {/* Token Info */}
-      <section id="token" className="py-20 px-4 bg-gray-900 text-center">
+      <section id="token" className="py-20 px-4 bg-gray-900 text-center animate-fade-in">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-4">Token Details</h2>
-          <p className="text-gray-300 mb-2">Smart contract on Ethereum. Transparency you can verify.</p>
+          <p className="text-gray-300 mb-2 leading-relaxed">Smart contract on Ethereum. Transparency you can verify.</p>
           <p className="text-blue-500 text-sm">Contract: 0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d</p>
           <a
             href="https://etherscan.io/token/0xA8C0e61a46Fd6bc1aA8e45ED6fEFBE8a09Cedb2d"
-            className="text-blue-400 underline text-sm"
+            className="text-blue-400 underline text-sm hover:text-blue-500 transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -155,15 +157,15 @@ export default function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-black py-20 px-4 text-center">
+      <section id="about" className="bg-black py-20 px-4 text-center animate-fade-in">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">About S4IL</h2>
-          <p className="text-gray-300 text-lg mb-4">
+          <p className="text-gray-300 text-lg mb-4 leading-relaxed">
             SUP4Israel is a decentralized crypto project built to support trusted causes in Israel, focusing on nature preservation and the restoration of old cities. A big part of our profits goes to these causes, not to war.
           </p>
           <a
             href="https://github.com/SUP4IL/official-sup4israel-site/raw/main/S4IL-whitepaper-file.pdf"
-            className="text-blue-400 underline text-sm"
+            className="text-blue-400 underline text-sm hover:text-blue-500 transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -173,15 +175,15 @@ export default function App() {
       </section>
 
       {/* Team Section */}
-      <section id="team" className="bg-gray-900 py-20 px-4 text-center">
+      <section id="team" className="bg-gray-900 py-20 px-4 text-center animate-fade-in">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">Our Team</h2>
-          <p className="text-gray-300 text-lg mb-4">
+          <p className="text-gray-300 text-lg mb-4 leading-relaxed">
             SUP4Israel (S4IL) is led by Silver Jared Bijlsma, a dedicated founder committed to transparency and impact.
           </p>
           <a
             href="https://www.linkedin.com/company/sup4israel/"
-            className="text-blue-400 underline text-sm"
+            className="text-blue-400 underline text-sm hover:text-blue-500 transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -191,10 +193,10 @@ export default function App() {
       </section>
 
       {/* Token Sale */}
-      <section id="tokensale" className="bg-gray-900 py-20 px-4 text-center">
+      <section id="tokensale" className="bg-gray-900 py-20 px-4 text-center animate-fade-in">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">Token Sale</h2>
-          <p className="text-gray-300 text-lg mb-10">
+          <p className="text-gray-300 text-lg mb-10 leading-relaxed">
             Join the S4IL token presale and be part of a movement that supports Israel’s heritage and nature.
           </p>
           <iframe
@@ -205,33 +207,43 @@ export default function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-black py-20 px-4 text-center">
+      <section id="contact" className="bg-black py-20 px-4 text-center animate-fade-in">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-6">Contact Us</h2>
-          <p className="text-gray-300 text-lg mb-4">
+          <p className="text-gray-300 text-lg mb-4 leading-relaxed">
             Have questions? Reach out to us on X, LinkedIn, or via email.
           </p>
           <div className="flex justify-center gap-4 mb-4">
             <a
               href="https://x.com/SUP4IL"
               target="_blank"
-              className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition"
+              className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition duration-300"
             >
               Contact on X
             </a>
             <a
               href="https://www.linkedin.com/company/sup4israel/"
               target="_blank"
-              className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition"
+              className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition duration-300"
             >
               Contact on LinkedIn
             </a>
           </div>
           <p className="text-gray-300 text-lg">
-            Email: <a href="mailto:support@sup4israel.com" className="text-blue-400 underline">support@sup4israel.com</a>
+            Email: <a href="mailto:support@sup4israel.com" className="text-blue-400 underline hover:text-blue-500 transition duration-300">support@sup4israel.com</a>
           </p>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 py-6 text-center text-gray-400">
+        <p className="text-sm mb-2">© 2025 SUP4Israel. All rights reserved.</p>
+        <div className="flex justify-center gap-4">
+          <a href="https://x.com/SUP4IL" target="_blank" className="text-blue-400 hover:text-blue-500 transition duration-300">X</a>
+          <a href="https://www.linkedin.com/company/sup4israel/" target="_blank" className="text-blue-400 hover:text-blue-500 transition duration-300">LinkedIn</a>
+          <a href="mailto:support@sup4israel.com" className="text-blue-400 hover:text-blue-500 transition duration-300">Email</a>
+        </div>
+      </footer>
 
       <Analytics />
     </main>
