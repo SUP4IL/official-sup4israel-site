@@ -163,9 +163,15 @@ export default function App() {
           <p className="text-gray-300 text-lg mb-4 leading-relaxed">
             SUP4Israel is a decentralized crypto project built to support trusted causes in Israel, focusing on nature preservation and the restoration of old cities. A big part of our profits goes to these causes, not to war.
           </p>
+          {/* Highlighted Mission Statement */}
+          <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg mb-6">
+            <p className="text-gray-200 text-lg leading-relaxed">
+              Our mission is to support <span className="font-bold text-blue-400">nature preservation</span> and the <span className="font-bold text-blue-400">restoration of old cities</span> in Israel, ensuring a sustainable future while preserving cultural heritage.
+            </p>
+          </div>
           <a
             href="https://github.com/SUP4IL/official-sup4israel-site/raw/main/S4IL-whitepaper-file.pdf"
-            className="text-blue-400 underline text-sm hover:text-blue-500 transition duration-300"
+            className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
