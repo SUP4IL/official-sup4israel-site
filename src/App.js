@@ -176,18 +176,18 @@ export default function App() {
             <div className="flex flex-col items-center">
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
-                alt="Nature Preservation in Israel"
+                alt="Hula Valley Nature Preservation"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
-              <p className="text-gray-400 text-sm mt-2">Nature Preservation in Israel</p>
+              <p className="text-gray-400 text-sm mt-2">Hula Valley Nature Preservation (Placeholder)</p>
             </div>
             <div className="flex flex-col items-center">
               <img
                 src="https://images.unsplash.com/photo-1593604340847-4d1d767edba7?auto=format&fit=crop&w=800&q=80"
-                alt="Cultural Restoration in Israel"
+                alt="Old City of Acre Cultural Restoration"
                 className="w-full h-48 object-cover rounded-lg shadow-lg"
               />
-              <p className="text-gray-400 text-sm mt-2">Cultural Restoration in Israel</p>
+              <p className="text-gray-400 text-sm mt-2">Old City of Acre Cultural Restoration (Placeholder)</p>
             </div>
           </div>
         </div>
