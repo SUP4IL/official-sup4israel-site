@@ -179,10 +179,6 @@ export default function App() {
               Our mission is to support <span className="font-bold text-blue-400">nature preservation</span> and the <span className="font-bold text-blue-400">restoration of old cities</span> in Israel, ensuring a sustainable future while preserving cultural heritage.
             </p>
           </div>
-          {/* Impact Statement (Placeholder) */}
-          <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg shadow-lg mb-6">
-            <p className="text-gray-300 text-sm">Funds Raised: <span className="font-bold text-blue-400">$0</span> | Projects Supported: <span className="font-bold text-blue-400">0</span></p>
-          </div>
           {/* Subtle Divider */}
           <hr className="border-gray-700 mb-6" />
           <a
@@ -261,7 +257,7 @@ export default function App() {
       <footer className="bg-gray-900 py-6 text-center text-gray-400">
         <p className="text-sm mb-2">© 2025 SUP4Israel. All rights reserved.</p>
         <div className="flex justify-center gap-4">
-          <a href="https://x.com/SUP4IL" target="_blank" className="text-blue-400 hover:text-blue-500 transition duration-300">X</a>
+          <a href="https://x.com/SUP4IL" target="_blank" className="text-blue- -blue-400 hover:text-blue-500 transition duration-3">X</a>
           <a href="https://www.linkedin.com/company/sup4israel/" target="_blank" className="text-blue-400 hover:text-blue-500 transition duration-300">LinkedIn</a>
           <a href="mailto:support@sup4israel.com" className="text-blue-400 hover:text-blue-500 transition duration-300">Email</a>
         </div>
