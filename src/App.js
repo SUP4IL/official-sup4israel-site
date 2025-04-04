@@ -157,25 +157,41 @@ export default function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-black py-20 px-4 text-center animate-fade-in">
+      <section id="about" className="bg-gradient-to-b from-black to-gray-900 py-20 px-4 text-center animate-fade-in">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-6">About S4IL</h2>
-          <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-            SUP4Israel is a decentralized crypto project built to support trusted causes in Israel, focusing on nature preservation and the restoration of old cities. A big part of our profits goes to these causes, not to war.
+          <h2 className="text-4xl font-bold text-white mb-8">About S4IL</h2>
+          <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+            SUP4Israel is a decentralized crypto project built to support trusted causes in Israel, focusing on <span className="font-bold text-blue-400">nature preservation</span> and the <span className="font-bold text-blue-400">restoration of old cities</span>. A big part of our profits goes to these causes, not to war.
           </p>
           {/* Highlighted Mission Statement */}
           <div className="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg mb-6">
+            <div className="flex items-center justify-center mb-4">
+              {/* Tree Icon for Nature Preservation */}
+              <svg className="w-6 h-6 text-blue-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12h4l3 8 4-16 3 8h4" />
+              </svg>
+              {/* Building Icon for Cultural Restoration */}
+              <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
             <p className="text-gray-200 text-lg leading-relaxed">
               Our mission is to support <span className="font-bold text-blue-400">nature preservation</span> and the <span className="font-bold text-blue-400">restoration of old cities</span> in Israel, ensuring a sustainable future while preserving cultural heritage.
             </p>
           </div>
+          {/* Impact Statement (Placeholder) */}
+          <div className="bg-gray-800 bg-opacity-50 p-4 rounded-lg shadow-lg mb-6">
+            <p className="text-gray-300 text-sm">Funds Raised: <span className="font-bold text-blue-400">$0</span> | Projects Supported: <span className="font-bold text-blue-400">0</span></p>
+          </div>
+          {/* Subtle Divider */}
+          <hr className="border-gray-700 mb-6" />
           <a
             href="https://github.com/SUP4IL/official-sup4israel-site/raw/main/S4IL-whitepaper-file.pdf"
-            className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition duration-300"
+            className="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our Whitepaper
+            Read Our Whitepaper
           </a>
         </div>
       </section>
