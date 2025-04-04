@@ -162,7 +162,7 @@ export default function App() {
             SUP4Israel is a decentralized crypto project built to support trusted causes in Israel, focusing on nature preservation and the restoration of old cities. A big part of our profits goes to these causes, not to war.
           </p>
           <a
-            href="https://drive.google.com/file/d/1qW5zX8kY9mN0pQ2rT4uV7wX8yZ9aB0c/view?usp=sharing"
+            href="https://github.com/SUP4IL/official-sup4israel-site/raw/main/S4IL-whitepaper-file.pdf"
             className="text-blue-400 underline text-sm"
             target="_blank"
             rel="noopener noreferrer"
@@ -180,7 +180,7 @@ export default function App() {
             SUP4Israel (S4IL) is led by Silver Jared Bijlsma, a dedicated founder committed to transparency and impact.
           </p>
           <a
-            href="[Replace with your S4IL LinkedIn Company Page URL]"
+            href="https://www.linkedin.com/company/sup4israel/"
             className="text-blue-400 underline text-sm"
             target="_blank"
             rel="noopener noreferrer"
@@ -220,7 +220,7 @@ export default function App() {
               Contact on X
             </a>
             <a
-              href="[Replace with your S4IL LinkedIn Company Page URL]"
+              href="https://www.linkedin.com/company/sup4israel/"
               target="_blank"
               className="inline-block px-6 py-3 bg-blue-400 text-black rounded-lg font-semibold hover:bg-blue-500 transition"
             >
