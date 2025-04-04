@@ -182,7 +182,7 @@ export default function App() {
           {/* Subtle Divider */}
           <hr className="border-gray-700 mb-6" />
           <a
-            href="https://github.com/SUP4IL/official-sup4israel-site/raw/main/S4IL-whitepaper-file.pdf"
+            href="https://github.com/SUP4IL/official-sup4israel-site/raw/main/S4IL_whitepaper_file.pdf"
             className="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-lg"
             target="_blank"
             rel="noopener noreferrer"
@@ -257,7 +257,7 @@ export default function App() {
       <footer className="bg-gray-900 py-6 text-center text-gray-400">
         <p className="text-sm mb-2">© 2025 SUP4Israel. All rights reserved.</p>
         <div className="flex justify-center gap-4">
-          <a href="https://x.com/SUP4IL" target="_blank" className="text-blue- -blue-400 hover:text-blue-500 transition duration-3">X</a>
+          <a href="https://x.com/SUP4IL" target="_blank" className="text-blue-400 hover:text-blue-500 transition duration-300">X</a>
           <a href="https://www.linkedin.com/company/sup4israel/" target="_blank" className="text-blue-400 hover:text-blue-500 transition duration-300">LinkedIn</a>
           <a href="mailto:support@sup4israel.com" className="text-blue-400 hover:text-blue-500 transition duration-300">Email</a>
         </div>
